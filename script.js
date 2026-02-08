@@ -1,6 +1,8 @@
 const defaultPositions = document.getElementById('part-two').getHTML();
 const errorMessage = document.getElementById('error-message');
+const partOneTitle = document.getElementById('part-one-title');
 errorMessage.classList.add("hidden");
+partOneTitle.classList.add("hidden");
 
 var input = document.getElementById("password-field");
 input.addEventListener("keypress", function (event) {
@@ -35,6 +37,7 @@ function checkInput() {
         partOne.classList.add("hidden");
         partTwo.classList.remove("hidden");
     }
+    partOneTitle.classList.remove("hidden");
 }
 
 function dragStartHandler(ev) {
@@ -89,7 +92,11 @@ function handleSubmit() {
         return;
     }
 
-
     document.getElementById('part-two').classList.add('hidden');
     document.getElementById('part-three').classList.remove('hidden');
+}
+
+function goBack() {
+    document.getElementById('part-two').classList.add('hidden');
+    document.getElementById('part-one').classList.remove('hidden');
 }
