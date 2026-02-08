@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Can you solve it?</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <div id="part-one" class="">
+            <div class="image-container">
+                <img class="error" onclick="toggleElement()" src="img/error.png" alt="error text" />
+            </div>
+            <div class="text-fields" id="text-field">
+                <div>
+                    <input type="text" id="password-field" />
+                    <button id="password-button" onclick="checkInput()">Enter</button>
+                </div>
+            </div>
+            <div class="text-container">
+                <p> 0 1 0 0 0 1 0 1 0 1 1 1 0 1 1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 0 1 0
+                    0 1 1 1 1 0 0 1 0 1 1 1 0 1 0 0 0 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1
+                    0 1 1 0 1 1 1 0 0 1 1 0 0 1 1 1 0 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 1 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1
+                    1 1
+                    0 1 1 1
+                    0 1 1 0 1 0 0 1 0 1 1 1 0 1 0 0 0 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1
+                    0 1 1 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 1 0 1 1 0 0 0 0 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 1 1
+                    0 1 1 1 0 1 0 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 0 1 0 1 1 1 0 1 0 0
+                    0 1 1 0 1 0 0 1 0 1 1 0 1 1 1 1 0 1 1 0 1 1 1 0 0 0 1 0 0 0 0 0
+                    0 1 0 0 0 1 0 1 0 1 1 1 0 1 1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 0 1 0
+                    0 1 1 1 1 0 0 1 0 1 1 1 0 1 0 0 0 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1
+                    0 1 1 0 1 1 1 0 0 1 1 0 0 1 1 1 0 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 1 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1
+                    1 1
+                    0 1 1 1
+                    0 1 1 0 1 0 0 1 0 1 1 1 0 1 0 0 0 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1
+                    0 1 1 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 1 0 1 1 0 0 0 0 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 1 1
+                    0 1 1 1 0 1 0 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 0 1 0 1 1 1 0 1 0 0
+                    0 1 1 0 1 0 0 1 0 1 1 0 1 1 1 1 0 1 1 0 1 1 1 0 0 0 1 0 0 0 0 0</p>
+            </div>W
+        </div>
+        <div id="part-two" class="part-two hidden">
+            <div class="part-two-container">
+                <p>The answer to your question has already been there.</p>
+                <div class="box-container">
+                    <div id="box1" class="binary-box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    </div>
+                    <div id="box2" class="binary-box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    </div>
+                    <div id="box3" class="binary-box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    </div>
+                    <div id="box4" class="binary-box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    </div>
+                </div>
+                <p id="error-message"">Incorrect</p>
+                <div id=" box5" class="binary-boxes" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    <img id="i" src="img/i.png" draggable="true" ondragstart="dragStartHandler(event)" />
+                    <img id="c" src="img/c.png" draggable="true" ondragstart="dragStartHandler(event)" />
+                    <img id="w" src="img/w.png" draggable="true" ondragstart="dragStartHandler(event)" />
+                    <img id="e" src="img/e.png" draggable="true" ondragstart="dragStartHandler(event)" />
+            </div>
+            <button onclick="handleSubmit()">Submit</button>
+        </div>
+        </div>
+        <div id="part-three" class="part-three hidden">
+            <p>Thanks for playing this short puzzle!</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
